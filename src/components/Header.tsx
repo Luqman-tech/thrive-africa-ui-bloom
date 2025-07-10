@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Menu, X, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,12 +21,18 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-earth-brown hover:text-earth-green transition-colors duration-300">
+            <Link to="/" className="text-earth-brown hover:text-earth-green transition-colors duration-300">
               Home
-            </a>
-            <a href="#services" className="text-earth-brown hover:text-earth-green transition-colors duration-300">
+            </Link>
+            <Link to="/services" className="text-earth-brown hover:text-earth-green transition-colors duration-300">
               Services
-            </a>
+            </Link>
+            <Link to="/projects" className="text-earth-brown hover:text-earth-green transition-colors duration-300">
+              Projects
+            </Link>
+            <Link to="/blog" className="text-earth-brown hover:text-earth-green transition-colors duration-300">
+              Blog
+            </Link>
             <a href="#about" className="text-earth-brown hover:text-earth-green transition-colors duration-300">
               About
             </a>
@@ -48,12 +55,18 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 animate-fade-in">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#home" className="block px-3 py-2 text-earth-brown hover:text-earth-green transition-colors">
+              <Link to="/" className="block px-3 py-2 text-earth-brown hover:text-earth-green transition-colors">
                 Home
-              </a>
-              <a href="#services" className="block px-3 py-2 text-earth-brown hover:text-earth-green transition-colors">
+              </Link>
+              <Link to="/services" className="block px-3 py-2 text-earth-brown hover:text-earth-green transition-colors">
                 Services
-              </a>
+              </Link>
+              <Link to="/projects" className="block px-3 py-2 text-earth-brown hover:text-earth-green transition-colors">
+                Projects
+              </Link>
+              <Link to="/blog" className="block px-3 py-2 text-earth-brown hover:text-earth-green transition-colors">
+                Blog
+              </Link>
               <a href="#about" className="block px-3 py-2 text-earth-brown hover:text-earth-green transition-colors">
                 About
               </a>
