@@ -5,13 +5,13 @@ export default defineStackbitConfig({
   contentSources: [
     new GitContentSource({
       rootPath: __dirname,
-      contentDirs: ["content"],
+      contentDirs: ["public/content"],
       models: [
         {
           name: "Services",
           type: "page",
           urlPath: "/services",
-          filePath: "content/services.json",
+          filePath: "public/content/services.json",
           fields: [
             { name: "title", type: "string", required: true },
             { name: "description", type: "string" },
@@ -22,7 +22,7 @@ export default defineStackbitConfig({
           name: "Projects",
           type: "page",
           urlPath: "/projects",
-          filePath: "content/projects.json",
+          filePath: "public/content/projects.json",
           fields: [
             { name: "title", type: "string", required: true },
             { name: "description", type: "string" },
@@ -33,7 +33,7 @@ export default defineStackbitConfig({
           name: "BlogPost",
           type: "page",
           urlPath: "/blog/{slug}",
-          filePath: "content/blog/{slug}.json",
+          filePath: "public/content/blog/{slug}.json",
           fields: [
             { name: "title", type: "string", required: true },
             { name: "date", type: "date" },
